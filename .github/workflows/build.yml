@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Hadolint
-      uses: hadolint/hadolint-action@v3.1.0
+    - name: Docker Build
+      run: docker build . --file Dockerfile --tag passbolt-ansible-lookup:$(date +%s)
