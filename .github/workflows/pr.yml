@@ -7,5 +7,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - name: Hadolint Action
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Hadolint
       uses: hadolint/hadolint-action@v3.1.0
