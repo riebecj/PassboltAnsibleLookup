@@ -10,4 +10,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Docker Build
-      run: docker build . --file Dockerfile --tag PassboltAnsibleLookup:$(date +%s)
+      run: docker build . --file Dockerfile --tag passbolt-ansible-lookup:$(date +%s)
