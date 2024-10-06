@@ -1,0 +1,10 @@
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hadolint Action
+      uses: hadolint/hadolint-action@v3.1.0
