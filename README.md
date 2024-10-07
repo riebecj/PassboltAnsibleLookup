@@ -79,7 +79,7 @@ tasks:
                 content: "{% raw %}{{ requested_password }}{% endraw %}"
                 dest: passbolt.secrets
               delegate_to: localhost
-    containerImage: ghcr.io/riebecj/passboltansiblelookup:latest
+    containerImage: ghcr.io/riebecj/passboltansiblelookup:latest  # You can also change this to a specific version.
     commands:
       - ansible-playbook -i inventory.ini myplaybook.yml
 outputs:
