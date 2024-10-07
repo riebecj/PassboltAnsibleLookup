@@ -65,7 +65,7 @@ tasks:
               set_fact:
                 requested_password: "{% raw %}{{ lookup('anatomicjc.passbolt.passbolt', '{% endraw %}{{ inputs.SecretName }}{% raw %}').password }}{% endraw %}"
               environment:
-                PASSBOLT_BASE_URL: "https://secrets.riebe.cloud"
+                PASSBOLT_BASE_URL: "https://passbolt.myendpoint.example"  # Hardcode this or use a KV store
                 PASSBOLT_PRIVATE_KEY: "{{ secret('PASSBOLT_PRIVATE_KEY') }}"
                 PASSBOLT_PASSPHRASE: "{{ secret('PASSBOLT_PASSPHRASE') }}"
             - name: Create File
